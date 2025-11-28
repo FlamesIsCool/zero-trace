@@ -11,7 +11,7 @@ import threading
 # CONFIG / ENV
 # ==========================
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN", "")
-SECRET_KEY = os.getenv("SECRET_KEY", "dontseemehehecreaky").encode()
+SECRET_KEY = os.getenv("SECRET_KEY", "bHfJk82mDH7sks93haHD02mna293kdlZ").encode()
 
 STORAGE_FILE = "scripts.json"
 
@@ -188,3 +188,4 @@ def start_flask():
 if __name__ == "__main__":
     threading.Thread(target=start_flask).start()
     threading.Thread(target=start_discord).start()
+
