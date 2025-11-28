@@ -1,7 +1,11 @@
 services:
   - type: web
-    name: zerotrace
+    name: script-host
     env: python
-    plan: free
     buildCommand: ""
-    startCommand: gunicorn server:app
+    startCommand: "python server.py"
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: SECRET_KEY
+        sync: false
