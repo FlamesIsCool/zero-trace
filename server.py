@@ -149,7 +149,7 @@ async def get_script(interaction: discord.Interaction, script_id: str):
     base = "https://" + os.getenv("RENDER_EXTERNAL_URL", "")
     if not base or "None" in base:
         # fallback inside request
-        base = "https://your-app.onrender.com"
+        base = "https://zero-trace-p1aq.onrender.com"
 
     signed = f"{base}/signed/{script_id}"
     code = f'loadstring(game:HttpGet("{signed}"))()'
@@ -188,4 +188,5 @@ def start_flask():
 if __name__ == "__main__":
     threading.Thread(target=start_flask).start()
     threading.Thread(target=start_discord).start()
+
 
